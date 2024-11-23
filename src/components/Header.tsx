@@ -7,7 +7,7 @@ const Header = () => {
                 <h1 className="text-3xl">BoardApp</h1>
                 <div className="flex gap-6">
                     <Link to="/">ホーム</Link>
-                    <Link to="/create">新規作成</Link>
+                    <Link to="/new">新規作成</Link>
                 </div>
             </div>
         </header>
