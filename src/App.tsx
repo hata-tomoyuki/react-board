@@ -1,18 +1,18 @@
-import Header from "./components/header";
-import Threds from "./components/Threads";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <section className="w-4/5 mx-auto py-12">
-          <h2 className="text-2xl">スレッド一覧</h2>
-          <Threds />
-        </section>
-      </main>
-    </>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
