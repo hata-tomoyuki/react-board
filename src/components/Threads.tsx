@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Thred from "./Thread";
+import Thread from "./Thread";
 
 const API_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -15,7 +15,6 @@ const Threads = () => {
         const fetchPost = async () => {
             const response = await fetch(`${API_URL}/threads`)
             const data = await response.json()
-            console.log(data)
             setPost(data)
         }
         fetchPost()
@@ -24,7 +23,7 @@ const Threads = () => {
     return (
         <div className="mt-6 flex flex-col gap-2">
             {post.map((post) => (
-                <Thred key={post.id} post={post} />
+                <Thread key={post.id} post={post} />
             ))}
         </div>
     )
