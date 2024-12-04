@@ -31,8 +31,8 @@ const Create = () => {
 
     return (
         <MainWrapper pageTitle="スレッド新規作成">
-            <form className="mt-6" onSubmit={handleSubmit}>
-                <div className="flex flex-col gap-2 relative py-6">
+            <form onSubmit={handleSubmit}>
+                <div className="flex flex-col gap-2 relative pb-6">
                     <label htmlFor="title">タイトル</label>
                     <input type="text" id="title" name="title" onChange={(e) => setTitle(e.target.value)} className={`p-2 border border-gray-300 rounded-md w-2/3 ${error && 'bg-red-100 border-red-500'}`} />
                     <p className='text-red-500 absolute left-0 bottom-0'>{error}</p>
