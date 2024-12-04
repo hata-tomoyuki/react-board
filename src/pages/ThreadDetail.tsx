@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import MainWrapper from '../components/MainWrapper';
 import PostList from '../components/PostList';
 import Loading from '../components/Loading';
+import PostForm from '../components/PostForm';
 
 const API_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -30,7 +31,10 @@ const ThreadDetail = () => {
 
     return (
         <MainWrapper pageTitle="スレッド内投稿一覧">
-            {isLoading ? <Loading /> : <PostList posts={posts} />}
+            <div className='flex flex-col gap-4'>
+                <PostForm thread_id={thread_id} posts={posts} setPosts={setPosts} />
+                {isLoading ? <Loading /> : <PostList posts={posts} />}
+            </div>
         </MainWrapper>
     )
 }
