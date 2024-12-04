@@ -21,7 +21,7 @@ const Threads = () => {
     }, [])
 
     return (
-        <div className="mt-6 flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
             {post.map((post) => (
                 <Thread key={post.id} post={post} />
             ))}
